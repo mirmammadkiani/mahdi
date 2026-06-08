@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کنکور عملی طراحی صنعتی | مهدی فرهمند تبار و هلنا نوابی</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="کلاس کنکور عملی طراحی صنعتی و کنکور هنر با مهدی فرهمند تبار و هلنا نوابی. آماده سازی تضمینی و اصولی برای موفقیت در کنکور عملی طراحی صنعتی.">
+    <meta name="keywords" content="کنکور عملی, کنکور هنر, علمی طراحی صنعتی, کنکور عملی طراحی صنعتی, کلاس کنکور عملی, مهدی فرهمند تبار, هلنا نوابی, طراحی صنعتی">
+    <meta name="author" content="مهدی فرهمند تبار, هلنا نوابی">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph for Social Media sharing -->
+    <meta property="og:title" content="کنکور عملی طراحی صنعتی | مهدی فرهمند تبار و هلنا نوابی">
+    <meta property="og:description" content="کلاس کنکور عملی طراحی صنعتی و کنکور هنر. آماده سازی برای آزمون عملی با اساتید مجرب.">
+    <meta property="og:image" content="پوستر.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Local Fonts and Icons are used -->
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background elements -->
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">طراحی صنعتی</h1>
+            <p class="subtitle">کلاس آمادگی کنکور عملی هنر</p>
+        </header>
+
+        <!-- Poster Section -->
+        <section class="poster-section">
+            <div class="poster-container" id="poster-container">
+                <img src="پوستر.jpg" alt="پوستر کلاس کنکور عملی طراحی صنعتی مهدی فرهمند تبار و هلنا نوابی" class="poster-image">
+                <div class="glass-reflection"></div>
+            </div>
+        </section>
+
+        <!-- Contact Links Section -->
+        <section class="contact-section">
+            <h2 class="contact-title">ارتباط با ما جهت ثبت‌نام و مشاوره</h2>
+            <div class="buttons-container">
+                <a href="https://t.me/id_exam405" target="_blank" rel="noopener noreferrer" class="btn btn-telegram">
+                    <img src="icons/telegram.svg" class="icon" alt="Telegram">
+                    <span>ارتباط در تلگرام</span>
+                </a>
+                <a href="https://ble.ir/id_exam405" target="_blank" rel="noopener noreferrer" class="btn btn-bale">
+                    <img src="icons/bale.svg" class="icon" alt="Bale">
+                    <span>ارتباط در بله</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive script for 3D tilt effect on the poster -->
+    <script>
+        const posterContainer = document.getElementById('poster-container');
+        
+        posterContainer.addEventListener('mousemove', (e) => {
+            const rect = posterContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Calculate rotation based on mouse position
+            const xRotation = ((y - rect.height / 2) / rect.height) * -12;
+            const yRotation = ((x - rect.width / 2) / rect.width) * 12;
+            
+            posterContainer.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        posterContainer.addEventListener('mouseleave', () => {
+            // Reset to original position smoothly
+            posterContainer.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+    </script>
+</body>
+</html>
